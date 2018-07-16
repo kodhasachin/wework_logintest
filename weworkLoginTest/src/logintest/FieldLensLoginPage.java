@@ -18,6 +18,9 @@ public class FieldLensLoginPage {
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement login_button;
 	
+	@FindBy(xpath="//a[contains(text(),'Sign up')]")
+	WebElement signup_link;
+	
 	public FieldLensLoginPage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -37,6 +40,11 @@ public class FieldLensLoginPage {
 	public void click_loginButton()
 	{
 		login_button.click();
+	}
+	
+	public void click_SignUpLink()
+	{
+		signup_link.click();
 	}
 
 }

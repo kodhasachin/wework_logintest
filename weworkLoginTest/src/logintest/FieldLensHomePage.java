@@ -18,6 +18,9 @@ public class FieldLensHomePage {
 	@FindBy(xpath="//a[@title='Drawings']")
 	WebElement drawings_link;
 	
+	@FindBy(xpath="//button[contains(text(), 'Get started')]")
+	WebElement getstarted_button;
+	
 	public FieldLensHomePage(WebDriver driver)
 	{
 		this.driver = driver;
@@ -37,6 +40,11 @@ public class FieldLensHomePage {
 	public boolean is_DrawingsLink_Displayed()
 	{
 		return drawings_link.isDisplayed();
+	}
+	
+	public void click_getStartedButton()
+	{
+		getstarted_button.click();
 	}
 	
 	
